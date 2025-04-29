@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/itc-foods-brands/dark-fantasy-poc/eds:/",
-    "/content/itc-foods-brands/dark-fantasy-poc/eds/configuration:/.helix/config.json",
-    "/content/itc-foods-brands/dark-fantasy-poc/eds/metadata:/metadata.json"
+    "/content/eds:/",
+    "/content/eds/configuration:/.helix/config.json",
+    "/content/eds/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/itc-foods-brands/dark-fantasy-poc/eds"
+    "/content/eds"
   ]
 }
