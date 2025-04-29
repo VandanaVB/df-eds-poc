@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json",
-    "/content/aem-boilerplate/metadata:/metadata.json"
+    "/content/itc-foods-brands/dark-fantasy-poc/eds:/",
+    "/content/itc-foods-brands/dark-fantasy-poc/eds/configuration:/.helix/config.json",
+    "/content/itc-foods-brands/dark-fantasy-poc/eds/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/itc-foods-brands/dark-fantasy-poc/eds"
   ]
 }
