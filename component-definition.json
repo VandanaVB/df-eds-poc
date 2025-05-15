@@ -158,6 +158,112 @@
           }
         }
       ]
+    },
+    {
+      "title": "Dark Fantasy Core Components",
+      "id": "darkfantasy-core",
+      "components": [
+        {
+          "id": "header",
+          "model": "header",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        },
+        {
+          "id": "product-range",
+          "model": "product-range",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        },
+        {
+          "id": "recipe-carousel",
+          "model": "recipe-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Interactive Components",
+      "id": "interactive",
+      "components": [
+        {
+          "id": "product-tabs",
+          "model": "product-tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        },
+        {
+          "id": "interactive-quiz",
+          "model": "interactive-quiz",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Marketing Components",
+      "id": "marketing",
+      "components": [
+        {
+          "id": "mobile-promotion",
+          "model": "mobile-promotion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        },
+        {
+          "id": "social-gallery",
+          "model": "social-gallery",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        },
+        {
+          "id": "video-feature",
+          "model": "video-feature",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block"
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 }

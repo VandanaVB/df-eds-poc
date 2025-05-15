@@ -214,5 +214,116 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "interactive-quiz",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Quiz Heading",
+        "valueType": "string",
+        "defaultValue": "What's Your Cookie Personality?"
+      },
+      {
+        "component": "collection",
+        "name": "questions",
+        "label": "Questions",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "text",
+            "name": "question",
+            "label": "Question Text",
+            "valueType": "string"
+          },
+          {
+            "component": "collection",
+            "name": "options",
+            "label": "Answer Options",
+            "valueType": "array",
+            "fields": [
+              {
+                "component": "text",
+                "name": "text",
+                "label": "Option Text",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "valueType": "string",
+        "defaultValue": "Get My Results"
+      }
+    ]
+  },
+  {
+    "id": "mobile-promotion",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "defaultValue": "Mobile Exclusive Offers"
+      },
+      {
+        "component": "text",
+        "name": "subheading",
+        "label": "Subheading",
+        "valueType": "string",
+        "defaultValue": "Download our app for special deals"
+      },
+      {
+        "component": "image-reference",
+        "name": "appStoreBadge",
+        "label": "App Store Badge",
+        "valueType": "string"
+      },
+      {
+        "component": "image-reference",
+        "name": "playStoreBadge",
+        "label": "Play Store Badge",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "social-gallery",
+    "fields": [
+      {
+        "component": "text",
+        "name": "hashtag",
+        "label": "Social Media Hashtag",
+        "valueType": "string",
+        "defaultValue": "#DarkFantasyCreations"
+      },
+      {
+        "component": "collection",
+        "name": "images",
+        "label": "Gallery Images",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "image-reference",
+            "name": "image",
+            "label": "Image",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "valueType": "string",
+        "defaultValue": "View More on Instagram"
+      }
+    ]
   }
 ]
