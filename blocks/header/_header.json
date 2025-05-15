@@ -1,0 +1,56 @@
+{
+  "definitions": [{
+    "title": "Dark Fantasy Header",
+    "id": "df-header",
+    "plugins": {
+      "xwalk": {
+        "page": {
+          "resourceType": "core/franklin/components/block/v1/block",
+          "template": {
+            "name": "Dark Fantasy Header",
+            "model": "df-header"
+          }
+        }
+      }
+    }
+  }],
+  "models": [{
+    "id": "df-header",
+    "fields": [
+      {
+        "component": "image-reference",
+        "name": "logo",
+        "label": "Logo",
+        "valueType": "string",
+        "defaultValue": "/assets/logo.png"
+      },
+      {
+        "component": "collection",
+        "name": "menuItems",
+        "label": "Menu Items",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "text",
+            "name": "text",
+            "label": "Link Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "url",
+            "label": "Link URL",
+            "valueType": "string"
+          }
+        ],
+        "defaultValue": [
+          {"text": "Our Products", "url": "/products"},
+          {"text": "Recipes", "url": "/recipes"},
+          {"text": "Media", "url": "/media"},
+          {"text": "About us", "url": "/about-us"}
+        ]
+      }
+    ]
+  }],
+  "filters": []
+}
