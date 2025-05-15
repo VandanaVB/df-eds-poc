@@ -164,16 +164,12 @@
       "id": "darkfantasy-core",
       "components": [
         {
-          "title": "Dark Fantasy Header",
-          "id": "df-header",
+          "id": "header",
+          "model": "header",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Dark Fantasy Header",
-                  "model": "df-header"
-                }
+                "resourceType": "core/franklin/components/block/v1/block"
               }
             }
           }
