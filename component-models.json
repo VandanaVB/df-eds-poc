@@ -216,6 +216,56 @@
     ]
   },
   {
+    "id": "df-header",
+    "fields": [
+      {
+        "component": "image-reference",
+        "name": "logo",
+        "label": "Logo",
+        "valueType": "string",
+        "defaultValue": "/assets/logo.png"
+      },
+      {
+        "component": "collection",
+        "name": "menuItems",
+        "label": "Menu Items",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "text",
+            "name": "text",
+            "label": "Link Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "url",
+            "label": "Link URL",
+            "valueType": "string"
+          }
+        ],
+        "defaultValue": [
+          {
+            "text": "Our Products",
+            "url": "/products"
+          },
+          {
+            "text": "Recipes",
+            "url": "/recipes"
+          },
+          {
+            "text": "Media",
+            "url": "/media"
+          },
+          {
+            "text": "About us",
+            "url": "/about-us"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "interactive-quiz",
     "fields": [
       {
@@ -323,6 +373,228 @@
         "label": "CTA Text",
         "valueType": "string",
         "defaultValue": "View More on Instagram"
+      }
+    ]
+  },
+  {
+    "id": "video-feature",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "defaultValue": "Dive into your ultimate Fantasy!"
+      },
+      {
+        "component": "text",
+        "name": "videoUrl",
+        "label": "Video URL",
+        "valueType": "string"
+      },
+      {
+        "component": "image-reference",
+        "name": "posterImage",
+        "label": "Poster Image",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-tabs",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Section Title",
+        "valueType": "string",
+        "defaultValue": "Bites of Fantasy"
+      },
+      {
+        "component": "collection",
+        "name": "categories",
+        "label": "Product Categories",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "text",
+            "name": "name",
+            "label": "Category Name",
+            "valueType": "string"
+          }
+        ],
+        "defaultValue": [
+          {
+            "name": "All"
+          },
+          {
+            "name": "Desserts"
+          },
+          {
+            "name": "Fills"
+          },
+          {
+            "name": "More"
+          }
+        ]
+      },
+      {
+        "component": "collection",
+        "name": "products",
+        "label": "Products",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "image-reference",
+            "name": "image",
+            "label": "Product Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "name",
+            "label": "Product Name",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "category",
+            "label": "Product Category",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "valueType": "string",
+        "defaultValue": "View range"
+      },
+      {
+        "component": "text",
+        "name": "ctaLink",
+        "label": "CTA Button Link",
+        "valueType": "string",
+        "defaultValue": "/products"
+      }
+    ]
+  },
+  {
+    "id": "recipe-carousel",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "defaultValue": "Brighten your day with Dark Fantasy"
+      },
+      {
+        "component": "text",
+        "name": "subheading",
+        "label": "Subheading",
+        "valueType": "string",
+        "defaultValue": "Create indulgent recipes, post it with #darkfantasycreations and get featured on our website!"
+      },
+      {
+        "component": "collection",
+        "name": "recipes",
+        "label": "Recipe Cards",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "image-reference",
+            "name": "image",
+            "label": "Recipe Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Recipe Title",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "difficulty",
+            "label": "Difficulty Level",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "time",
+            "label": "Preparation Time",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "valueType": "string",
+        "defaultValue": "View All"
+      },
+      {
+        "component": "text",
+        "name": "ctaLink",
+        "label": "CTA Button Link",
+        "valueType": "string",
+        "defaultValue": "/recipes"
+      }
+    ]
+  },
+  {
+    "id": "product-range",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Main Heading",
+        "valueType": "string",
+        "defaultValue": "EXPLORE THE RANGE"
+      },
+      {
+        "component": "text",
+        "name": "subheading",
+        "label": "Sub Heading",
+        "valueType": "string",
+        "defaultValue": "TO CREATE INDULGENT RECIPES"
+      },
+      {
+        "component": "collection",
+        "name": "products",
+        "label": "Products",
+        "valueType": "array",
+        "fields": [
+          {
+            "component": "image-reference",
+            "name": "image",
+            "label": "Product Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "name",
+            "label": "Product Name",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "valueType": "string",
+        "defaultValue": "Explore Full Range"
+      },
+      {
+        "component": "text",
+        "name": "ctaLink",
+        "label": "CTA Button Link",
+        "valueType": "string",
+        "defaultValue": "/products"
       }
     ]
   }

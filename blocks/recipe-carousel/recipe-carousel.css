@@ -1,0 +1,132 @@
+.df-recipe-section {
+  padding: 60px 20px;
+  background-color: #2d1a0c;
+  color: #fff;
+  text-align: center;
+}
+
+.df-recipe-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #e94e1b;
+}
+
+.df-recipe-subheading {
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.df-recipe-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  overflow: hidden;
+}
+
+.df-recipe-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.df-recipe-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 0 10px;
+  background-color: #3d2812;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.df-recipe-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.df-recipe-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.df-recipe-difficulty {
+  display: inline-block;
+  background-color: #000;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.df-recipe-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.df-recipe-time {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.df-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.df-slider-prev {
+  left: 10px;
+}
+
+.df-slider-next {
+  right: 10px;
+}
+
+.df-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.df-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #666;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.df-dot.active {
+  background-color: #e94e1b;
+}
+
+.df-view-all-btn {
+  display: inline-block;
+  background-color: #e94e1b;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.df-view-all-btn:hover {
+  background-color: #c73c0e;
+}

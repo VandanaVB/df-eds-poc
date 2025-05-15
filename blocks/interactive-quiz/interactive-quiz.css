@@ -1,0 +1,76 @@
+/* blocks/interactive-quiz/interactive-quiz.css */
+.df-quiz-section {
+  padding: 60px 20px;
+  background-color: #2d1a0c;
+  text-align: center;
+  color: #fff;
+}
+
+.df-quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.df-quiz-heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #e94e1b;
+}
+
+.df-quiz-progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.df-quiz-progress-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.3);
+  transition: background-color 0.3s;
+}
+
+.df-quiz-progress-dot.active {
+  background-color: #e94e1b;
+}
+
+.df-quiz-question {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.df-quiz-options {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.df-quiz-option {
+  padding: 15px 25px;
+  background-color: #3d2812;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.df-quiz-option:hover,
+.df-quiz-option.selected {
+  background-color: #e94e1b;
+}
+
+.df-quiz-cta {
+  background-color: #fff;
+  color: #2d1a0c;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.df-quiz-cta:hover {
+  background-color: #e94e1b;
+  color: #fff;
+}
