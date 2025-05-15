@@ -17,13 +17,19 @@
       "columns",
       "fragment",
       "quote",
-      "banner"
+      "banner",
+      "fantasy-showcase",
+      "character-card",
+      "dark-gallery",
+      "fantasy-quote",
+      "fantasy-carousel"
     ]
   },
   {
     "id": "cards",
     "components": [
-      "card"
+      "card",
+      "character-card"
     ]
   },
   {
@@ -39,7 +45,36 @@
       "image",
       "button",
       "title",
-      "quote"
+      "quote",
+      "fantasy-quote"
+    ]
+  },
+  {
+    "id": "fantasy",
+    "components": [
+      "character-card",
+      "fantasy-quote"
+    ]
+  },
+  {
+    "id": "gallery",
+    "components": [
+      "image"
+    ]
+  },
+  {
+    "id": "products",
+    "components": [
+      "product-card"
+    ]
+  },
+  {
+    "id": "interactive",
+    "components": [
+      "fantasy-carousel",
+      "accordion",
+      "tabs",
+      "modal"
     ]
   }
 ]
