@@ -1,0 +1,9 @@
+{
+  "elements": [
+    "title",
+    "subtitle",
+    "ctaText",
+    "ctaLink",
+    "image"
+  ]
+}
