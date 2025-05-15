@@ -223,7 +223,7 @@
         "name": "hashtag",
         "label": "Social Media Hashtag",
         "valueType": "string",
-        "defaultValue": "#DarkFantasyCreations"
+        "value": "#DarkFantasyCreations"
       },
       {
         "component": "collection",
@@ -244,7 +244,7 @@
         "name": "ctaText",
         "label": "CTA Text",
         "valueType": "string",
-        "defaultValue": "View More on Instagram"
+        "value": "View More on Instagram"
       }
     ]
   },
@@ -256,7 +256,7 @@
         "name": "heading",
         "label": "Heading",
         "valueType": "string",
-        "defaultValue": "Dive into your ultimate Fantasy!"
+        "value": "Dive into your ultimate Fantasy!"
       },
       {
         "component": "text",
