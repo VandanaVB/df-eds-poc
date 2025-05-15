@@ -15,21 +15,13 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "quote",
-      "banner",
-      "fantasy-showcase",
-      "character-card",
-      "dark-gallery",
-      "fantasy-quote",
-      "fantasy-carousel"
+      "fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
-      "card",
-      "character-card"
+      "card"
     ]
   },
   {
@@ -44,37 +36,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "quote",
-      "fantasy-quote"
-    ]
-  },
-  {
-    "id": "fantasy",
-    "components": [
-      "character-card",
-      "fantasy-quote"
-    ]
-  },
-  {
-    "id": "gallery",
-    "components": [
-      "image"
-    ]
-  },
-  {
-    "id": "products",
-    "components": [
-      "product-card"
-    ]
-  },
-  {
-    "id": "interactive",
-    "components": [
-      "fantasy-carousel",
-      "accordion",
-      "tabs",
-      "modal"
+      "title"
     ]
   }
 ]
