@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "header"
+      "fragment"
     ]
   },
   {
@@ -41,28 +40,11 @@
     ]
   },
   {
-    "id": "main-container",
-    "components": [
-      "header",
-      "product-range",
-      "recipe-carousel",
-      "product-tabs",
-      "video-feature",
-      "interactive-quiz"
-    ]
-  },
-  {
     "id": "marketing-container",
     "components": [
       "mobile-promotion",
-      "social-gallery"
-    ]
-  },
-  {
-    "id": "footer-container",
-    "components": [
-      "social-links",
-      "newsletter-signup"
+      "social-gallery",
+      "video-feature"
     ]
   }
 ]
