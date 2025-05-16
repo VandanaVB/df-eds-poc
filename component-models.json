@@ -590,79 +590,50 @@
     "id": "fantasy-bites",
     "fields": [
       {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Section Heading"
+        "component": "text",
+        "name": "title",
+        "label": "Section Title"
       },
       {
-        "component": "text-input",
-        "valueType": "string",
+        "component": "object",
+        "name": "tabs",
+        "label": "Product Tabs",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "label",
+            "label": "Tab Label"
+          },
+          {
+            "component": "object",
+            "name": "products",
+            "label": "Products",
+            "multi": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "image",
+                "label": "Product Image"
+              },
+              {
+                "component": "text",
+                "name": "alt",
+                "label": "Alt Text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
         "name": "ctaText",
-        "label": "CTA Button Text"
+        "label": "CTA Text"
       },
       {
-        "component": "reference",
-        "valueType": "aem-content",
+        "component": "text",
         "name": "ctaLink",
-        "label": "CTA Link",
-        "multi": false
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "allTabLabel",
-        "label": "All Tab Label"
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "dessertsTabLabel",
-        "label": "Desserts Tab Label"
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "fillsTabLabel",
-        "label": "Fills Tab Label"
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "moreTabLabel",
-        "label": "More Tab Label"
-      },
-      {
-        "component": "reference",
-        "valueType": "aem-content",
-        "name": "allProducts",
-        "label": "All Products",
-        "multi": true,
-        "source": "/content/dam/darkfantasy/products"
-      },
-      {
-        "component": "reference",
-        "valueType": "aem-content",
-        "name": "dessertsProducts",
-        "label": "Desserts Products",
-        "multi": true,
-        "source": "/content/dam/darkfantasy/products/desserts"
-      },
-      {
-        "component": "reference",
-        "valueType": "aem-content",
-        "name": "fillsProducts",
-        "label": "Fills Products",
-        "multi": true,
-        "source": "/content/dam/darkfantasy/products/fills"
-      },
-      {
-        "component": "reference",
-        "valueType": "aem-content",
-        "name": "moreProducts",
-        "label": "More Products",
-        "multi": true,
-        "source": "/content/dam/darkfantasy/products/more"
+        "label": "CTA Link"
       }
     ]
   }
