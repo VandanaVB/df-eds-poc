@@ -165,11 +165,15 @@
       "components": [
         {
           "id": "header",
-          "model": "header",
+          "title": "Header",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block"
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Header",
+                  "model": "header"
+                }
               }
             }
           }
