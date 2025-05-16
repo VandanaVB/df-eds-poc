@@ -1,99 +1,57 @@
 export default function decorate(block) {
-  // Create container
-  const tabsSection = document.createElement('section');
-  tabsSection.className = 'df-tabs-section';
+  // Prefer window.ueData (if Universal Editor injects it), else use block.dataset with comma-separated values
+  const heading = window.ueData?.heading || block.dataset.heading || 'Bites of Fantasy';
 
-  // Extract content
-  const heading = block.querySelector('h2, h3')?.textContent || 'Bites of Fantasy';
+  // These should be arrays (multi fields)
+  const categories = window.ueData?.categories ||
+    (block.dataset.categories ? block.dataset.categories.split(',').map(s => s.trim()) : ['All', 'Desserts', 'Fills', 'More']);
 
-  // Extract categories
-  let categories = ['All', 'Desserts', 'Fills', 'More'];
-  const categoryEls = block.querySelectorAll('.category');
-  if (categoryEls.length > 0) {
-    categories = Array.from(categoryEls).map(el => el.textContent);
-  }
+  const productImages = window.ueData?.productImages ||
+    (block.dataset.productImages ? block.dataset.productImages.split(',').map(s => s.trim()) : []);
+  const productNames = window.ueData?.productNames ||
+    (block.dataset.productNames ? block.dataset.productNames.split(',').map(s => s.trim()) : []);
+  const productCategories = window.ueData?.productCategories ||
+    (block.dataset.productCategories ? block.dataset.productCategories.split(',').map(s => s.trim()) : []);
 
-  // Extract products
-  const products = [];
-  const productRows = Array.from(block.querySelectorAll('.product'));
-
-  productRows.forEach(row => {
-    const image = row.querySelector('img');
-    const name = row.querySelector('.name')?.textContent || '';
-    const category = row.querySelector('.category')?.textContent || 'All';
-
-    if (image && name) {
-      products.push({ image: image.src, alt: image.alt, name, category });
-    }
-  });
-
-  // Get CTA button info
-  const ctaLink = block.querySelector('a')?.getAttribute('href') || '/products';
-  const ctaText = block.querySelector('a')?.textContent || 'View range';
-
-  // Build HTML structure
-  tabsSection.innerHTML = `
-    <h2 class="df-tabs-title">${heading}</h2>
-
-    <div class="df-tabs-nav">
-      ${categories.map(cat => `
-        <button class="df-tab-btn ${cat === 'All' ? 'active' : ''}" data-category="${cat}">${cat}</button>
-      `).join('')}
-    </div>
-
-    <div class="df-products-container">
-      ${products.map(product => `
-        <div class="df-product-item" data-category="${product.category}">
-          <img class="df-product-img" src="${product.image}" alt="${product.alt || product.name}">
-          <h3 class="df-product-name">${product.name}</h3>
-        </div>
-      `).join('')}
-    </div>
-
-    <div class="df-slider-dots">
-      ${Array(Math.ceil(products.length / 6)).fill(0).map((_, i) =>
-        `<button class="df-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></button>`
-      ).join('')}
-    </div>
-
-    <a href="${ctaLink}" class="df-view-range-btn">${ctaText}</a>
+  // Build HTML
+  block.innerHTML = `
+    <section class="df-product-tabs">
+      <h2 class="df-tabs-heading">${heading}</h2>
+      <div class="df-tabs-nav">
+        ${categories.map(cat => `
+          <button class="df-tab-btn${cat === 'All' ? ' active' : ''}" data-category="${cat}">${cat}</button>
+        `).join('')}
+      </div>
+      <div class="df-products-grid">
+        ${productImages.map((img, i) => `
+          <div class="df-product-card" data-category="${productCategories[i] || 'All'}">
+            <img src="${img}" alt="${productNames[i] || 'Product'}">
+            <h3>${productNames[i] || ''}</h3>
+          </div>
+        `).join('')}
+      </div>
+    </section>
   `;
 
-  // Replace block content
-  block.textContent = '';
-  block.append(tabsSection);
+  // Filtering logic
+  const tabButtons = block.querySelectorAll('.df-tab-btn');
+  const productCards = block.querySelectorAll('.df-product-card');
 
-  // Initialize tab functionality
-  initTabs(tabsSection);
-}
+  function filterProducts(category) {
+    productCards.forEach(card => {
+      const show = category === 'All' || card.dataset.category === category;
+      card.style.display = show ? 'block' : 'none';
+    });
+  }
 
-function initTabs(section) {
-  const tabButtons = section.querySelectorAll('.df-tab-btn');
-  const productItems = section.querySelectorAll('.df-product-item');
-
-  // Add click event to tab buttons
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Update active tab
       tabButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
-
-      // Filter products
-      const category = button.dataset.category;
-      filterProducts(productItems, category);
+      filterProducts(button.dataset.category);
     });
   });
 
-  // Initialize with "All" selected
-  filterProducts(productItems, 'All');
-}
-
-function filterProducts(products, category) {
-  products.forEach(item => {
-    if (category === 'All' || item.dataset.category === category) {
-      item.style.display = 'block';
-    } else {
-      item.style.display = 'none';
-    }
-  });
+  // Initialize with 'All'
+  filterProducts('All');
 }
