@@ -59,3 +59,13 @@
 .block.product-slider .view-range:hover {
   background: #c13c24;
 }
+
+.block.product-tab .product-image {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.block.product-tab .product-image img {
+  width: 100%;
+  border-radius: 8px;
+}

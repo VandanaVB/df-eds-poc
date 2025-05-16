@@ -535,7 +535,7 @@
         "label": "CTA Text"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "ctaLink",
         "label": "CTA Link"
       }
