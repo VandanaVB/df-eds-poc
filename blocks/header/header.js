@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const headerDiv = document.createElement('div');
-  headerDiv.className = 'df-header';
+  headerDiv.className = 'header';
 
   // Extract logo and menu items from block content
   const logo = block.querySelector('img') || { src: '/assets/logo.png', alt: 'Dark Fantasy' };

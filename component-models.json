@@ -18,8 +18,8 @@
         "component": "text",
         "valueType": "string",
         "name": "keywords",
-        "multi": true,
-        "label": "Keywords"
+        "label": "Keywords",
+        "multi": true
       }
     ]
   },
@@ -216,52 +216,18 @@
     ]
   },
   {
-    "id": "df-header",
+    "id": "header",
     "fields": [
       {
-        "component": "image-reference",
+        "component": "reference",
         "name": "logo",
-        "label": "Logo",
-        "valueType": "string",
-        "defaultValue": "/assets/logo.png"
+        "label": "Logo"
       },
       {
-        "component": "collection",
+        "component": "aem-content",
         "name": "menuItems",
         "label": "Menu Items",
-        "valueType": "array",
-        "fields": [
-          {
-            "component": "text",
-            "name": "text",
-            "label": "Link Text",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "url",
-            "label": "Link URL",
-            "valueType": "string"
-          }
-        ],
-        "defaultValue": [
-          {
-            "text": "Our Products",
-            "url": "/products"
-          },
-          {
-            "text": "Recipes",
-            "url": "/recipes"
-          },
-          {
-            "text": "Media",
-            "url": "/media"
-          },
-          {
-            "text": "About us",
-            "url": "/about-us"
-          }
-        ]
+        "multi": true
       }
     ]
   },
@@ -276,32 +242,44 @@
         "defaultValue": "What's Your Cookie Personality?"
       },
       {
-        "component": "collection",
-        "name": "questions",
-        "label": "Questions",
-        "valueType": "array",
-        "fields": [
+        "component": "select",
+        "name": "question1",
+        "label": "Question 1",
+        "options": [
           {
-            "component": "text",
-            "name": "question",
-            "label": "Question Text",
-            "valueType": "string"
+            "name": "Option 1",
+            "value": "option1"
           },
           {
-            "component": "collection",
-            "name": "options",
-            "label": "Answer Options",
-            "valueType": "array",
-            "fields": [
-              {
-                "component": "text",
-                "name": "text",
-                "label": "Option Text",
-                "valueType": "string"
-              }
-            ]
+            "name": "Option 2",
+            "value": "option2"
+          },
+          {
+            "name": "Option 3",
+            "value": "option3"
           }
-        ]
+        ],
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "question2",
+        "label": "Question 2",
+        "options": [
+          {
+            "name": "Option 1",
+            "value": "option1"
+          },
+          {
+            "name": "Option 2",
+            "value": "option2"
+          },
+          {
+            "name": "Option 3",
+            "value": "option3"
+          }
+        ],
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -330,16 +308,14 @@
         "defaultValue": "Download our app for special deals"
       },
       {
-        "component": "image-reference",
+        "component": "reference",
         "name": "appStoreBadge",
-        "label": "App Store Badge",
-        "valueType": "string"
+        "label": "App Store Badge"
       },
       {
-        "component": "image-reference",
+        "component": "reference",
         "name": "playStoreBadge",
-        "label": "Play Store Badge",
-        "valueType": "string"
+        "label": "Play Store Badge"
       }
     ]
   },
@@ -354,18 +330,10 @@
         "defaultValue": "#DarkFantasyCreations"
       },
       {
-        "component": "collection",
+        "component": "reference",
         "name": "images",
         "label": "Gallery Images",
-        "valueType": "array",
-        "fields": [
-          {
-            "component": "image-reference",
-            "name": "image",
-            "label": "Image",
-            "valueType": "string"
-          }
-        ]
+        "multi": true
       },
       {
         "component": "text",
@@ -373,6 +341,11 @@
         "label": "CTA Text",
         "valueType": "string",
         "defaultValue": "View More on Instagram"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link"
       }
     ]
   },
@@ -393,10 +366,9 @@
         "valueType": "string"
       },
       {
-        "component": "image-reference",
+        "component": "reference",
         "name": "posterImage",
-        "label": "Poster Image",
-        "valueType": "string"
+        "label": "Poster Image"
       }
     ]
   },
@@ -411,58 +383,45 @@
         "defaultValue": "Bites of Fantasy"
       },
       {
-        "component": "collection",
+        "component": "multiselect",
         "name": "categories",
         "label": "Product Categories",
-        "valueType": "array",
-        "fields": [
+        "options": [
           {
-            "component": "text",
-            "name": "name",
-            "label": "Category Name",
-            "valueType": "string"
-          }
-        ],
-        "defaultValue": [
-          {
-            "name": "All"
+            "name": "All",
+            "value": "All"
           },
           {
-            "name": "Desserts"
+            "name": "Desserts",
+            "value": "Desserts"
           },
           {
-            "name": "Fills"
+            "name": "Fills",
+            "value": "Fills"
           },
           {
-            "name": "More"
+            "name": "More",
+            "value": "More"
           }
         ]
       },
       {
-        "component": "collection",
-        "name": "products",
-        "label": "Products",
-        "valueType": "array",
-        "fields": [
-          {
-            "component": "image-reference",
-            "name": "image",
-            "label": "Product Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "name",
-            "label": "Product Name",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "category",
-            "label": "Product Category",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "productImages",
+        "label": "Product Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "productNames",
+        "label": "Product Names",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "productCategories",
+        "label": "Product Categories",
+        "multi": true
       },
       {
         "component": "text",
@@ -472,11 +431,9 @@
         "defaultValue": "View range"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "ctaLink",
-        "label": "CTA Button Link",
-        "valueType": "string",
-        "defaultValue": "/products"
+        "label": "CTA Button Link"
       }
     ]
   },
@@ -498,36 +455,28 @@
         "defaultValue": "Create indulgent recipes, post it with #darkfantasycreations and get featured on our website!"
       },
       {
-        "component": "collection",
-        "name": "recipes",
-        "label": "Recipe Cards",
-        "valueType": "array",
-        "fields": [
-          {
-            "component": "image-reference",
-            "name": "image",
-            "label": "Recipe Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "title",
-            "label": "Recipe Title",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "difficulty",
-            "label": "Difficulty Level",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "time",
-            "label": "Preparation Time",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "recipeImages",
+        "label": "Recipe Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "recipeTitles",
+        "label": "Recipe Titles",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "recipeDifficulties",
+        "label": "Difficulty Levels",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "recipeTimes",
+        "label": "Preparation Times",
+        "multi": true
       },
       {
         "component": "text",
@@ -537,11 +486,9 @@
         "defaultValue": "View All"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "ctaLink",
-        "label": "CTA Button Link",
-        "valueType": "string",
-        "defaultValue": "/recipes"
+        "label": "CTA Button Link"
       }
     ]
   },
@@ -563,24 +510,16 @@
         "defaultValue": "TO CREATE INDULGENT RECIPES"
       },
       {
-        "component": "collection",
-        "name": "products",
-        "label": "Products",
-        "valueType": "array",
-        "fields": [
-          {
-            "component": "image-reference",
-            "name": "image",
-            "label": "Product Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "name",
-            "label": "Product Name",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "productImages",
+        "label": "Product Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "productNames",
+        "label": "Product Names",
+        "multi": true
       },
       {
         "component": "text",
@@ -590,11 +529,60 @@
         "defaultValue": "Explore Full Range"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "ctaLink",
-        "label": "CTA Button Link",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
+    "id": "social-links",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
         "valueType": "string",
-        "defaultValue": "/products"
+        "defaultValue": "Follow Us"
+      },
+      {
+        "component": "aem-content",
+        "name": "links",
+        "label": "Social Links",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "newsletter-signup",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string",
+        "defaultValue": "Subscribe to our Newsletter"
+      },
+      {
+        "component": "text",
+        "name": "subheading",
+        "label": "Subheading",
+        "valueType": "string",
+        "defaultValue": "Get the latest recipes and offers!"
+      },
+      {
+        "component": "text",
+        "name": "placeholder",
+        "label": "Email Placeholder",
+        "valueType": "string",
+        "defaultValue": "Enter your email"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "Button Text",
+        "valueType": "string",
+        "defaultValue": "Subscribe"
       }
     ]
   }
