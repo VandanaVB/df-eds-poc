@@ -177,7 +177,6 @@
         {
           "title": "Fantasy Bites Gallery",
           "id": "fantasy-bites",
-          "model": "fantasy-bites",
           "plugins": {
             "xwalk": {
               "page": {
