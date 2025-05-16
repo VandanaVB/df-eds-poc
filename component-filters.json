@@ -17,7 +17,13 @@
       "columns",
       "fragment",
       "social-gallery",
-      "video-feature"
+      "video-feature",
+      "header",
+      "product-range",
+      "recipe-carousel",
+      "product-tabs",
+      "interactive-quiz",
+      "mobile-promotion"
     ]
   },
   {
@@ -39,24 +45,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "main-container",
-    "components": [
-      "header",
-      "product-range",
-      "recipe-carousel",
-      "product-tabs",
-      "video-feature",
-      "interactive-quiz"
-    ]
-  },
-  {
-    "id": "marketing-container",
-    "components": [
-      "mobile-promotion",
-      "social-gallery"
     ]
   },
   {
