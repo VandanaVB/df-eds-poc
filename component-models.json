@@ -522,57 +522,6 @@
     ]
   },
   {
-    "id": "fantasy-bites",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Section Title"
-      },
-      {
-        "component": "object",
-        "name": "tabs",
-        "label": "Product Tabs",
-        "multi": true,
-        "fields": [
-          {
-            "component": "text",
-            "name": "label",
-            "label": "Tab Label"
-          },
-          {
-            "component": "object",
-            "name": "products",
-            "label": "Products",
-            "multi": true,
-            "fields": [
-              {
-                "component": "reference",
-                "name": "image",
-                "label": "Product Image"
-              },
-              {
-                "component": "text",
-                "name": "alt",
-                "label": "Alt Text"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Text"
-      },
-      {
-        "component": "text",
-        "name": "ctaLink",
-        "label": "CTA Link"
-      }
-    ]
-  },
-  {
     "id": "product-slider",
     "fields": [
       {
