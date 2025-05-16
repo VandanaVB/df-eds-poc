@@ -373,71 +373,6 @@
     ]
   },
   {
-    "id": "product-tabs",
-    "fields": [
-      {
-        "component": "text",
-        "name": "heading",
-        "label": "Section Title",
-        "valueType": "string",
-        "defaultValue": "Bites of Fantasy"
-      },
-      {
-        "component": "multiselect",
-        "name": "categories",
-        "label": "Product Categories",
-        "options": [
-          {
-            "name": "All",
-            "value": "All"
-          },
-          {
-            "name": "Desserts",
-            "value": "Desserts"
-          },
-          {
-            "name": "Fills",
-            "value": "Fills"
-          },
-          {
-            "name": "More",
-            "value": "More"
-          }
-        ]
-      },
-      {
-        "component": "reference",
-        "name": "productImages",
-        "label": "Product Images",
-        "multi": true
-      },
-      {
-        "component": "text",
-        "name": "productNames",
-        "label": "Product Names",
-        "multi": true
-      },
-      {
-        "component": "text",
-        "name": "productCategories",
-        "label": "Product Categories",
-        "multi": true
-      },
-      {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Button Text",
-        "valueType": "string",
-        "defaultValue": "View range"
-      },
-      {
-        "component": "aem-content",
-        "name": "ctaLink",
-        "label": "CTA Button Link"
-      }
-    ]
-  },
-  {
     "id": "recipe-carousel",
     "fields": [
       {
@@ -658,7 +593,7 @@
     ]
   },
   {
-    "id": "productTab",
+    "id": "product-tab",
     "fields": [
       {
         "component": "text",
