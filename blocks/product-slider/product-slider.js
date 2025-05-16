@@ -1,44 +1,55 @@
 export default function decorate(block) {
-  const tabBlocks = [...block.querySelectorAll('.product-tab')];
-  if (!tabBlocks.length) return;
+  const tabItems = [...block.querySelectorAll('[data-aue-model="product-tab"]')];
+  if (!tabItems.length) return;
 
+  // Create tab nav and panels container
   const tabNav = document.createElement('div');
   tabNav.className = 'tab-nav';
+  const panels = document.createElement('div');
+  panels.className = 'tab-panels';
 
-  const panelsContainer = document.createElement('div');
-  panelsContainer.className = 'tab-panels';
+  tabItems.forEach((item, i) => {
+    const labelEl = item.querySelector('[data-aue-prop="tabLabel"]');
+    const imgEl = item.querySelector('img');
 
-  tabBlocks.forEach((tabBlock, i) => {
-    const heading = tabBlock.querySelector('h3');
-    const tabLabel = heading?.textContent?.trim() || `Tab ${i + 1}`;
-    heading?.remove(); // remove label from inside panel
+    const label = labelEl?.textContent?.trim() || `Tab ${i + 1}`;
+    const imgSrc = imgEl?.getAttribute('src') || '';
+    const imgAlt = imgEl?.getAttribute('alt') || '';
 
     // Create tab button
-    const button = document.createElement('button');
-    button.className = 'tab-button';
-    button.textContent = tabLabel;
-    if (i === 0) button.classList.add('active');
+    const btn = document.createElement('button');
+    btn.className = 'tab-button';
+    btn.textContent = label;
+    if (i === 0) btn.classList.add('active');
+    tabNav.appendChild(btn);
 
-    // Setup panel
+    // Create tab panel
     const panel = document.createElement('div');
     panel.className = 'tab-panel';
-    panel.append(...tabBlock.childNodes); // move content from tab
     if (i === 0) panel.classList.add('active');
 
-    // Add behavior
-    button.addEventListener('click', () => {
+    if (imgSrc) {
+      const img = document.createElement('img');
+      img.src = imgSrc;
+      img.alt = imgAlt;
+      img.className = 'product-image';
+      panel.appendChild(img);
+    }
+    panels.appendChild(panel);
+
+    // Event binding
+    btn.addEventListener('click', () => {
       tabNav.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-      panelsContainer.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      button.classList.add('active');
+      panels.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
       panel.classList.add('active');
     });
 
-    tabNav.appendChild(button);
-    panelsContainer.appendChild(panel);
-    tabBlock.remove(); // remove original tab
+    // Remove original rendered item
+    item.remove();
   });
 
-  // Append tab UI
-  block.prepend(tabNav);
-  block.append(panelsContainer);
+  // Add tab nav & panels to block
+  block.appendChild(tabNav);
+  block.appendChild(panels);
 }
