@@ -1,0 +1,165 @@
+/* /blocks/fantasy-bites/fantasy-bites.css */
+
+.fantasy-bites-container {
+  background-color: #1a0b06;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.fantasy-bites-heading {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #f9e08e;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Tabs navigation */
+.fantasy-bites-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.fantasy-bites-tab {
+  padding: 10px 30px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fantasy-bites-tab.active {
+  background-color: #fff;
+  color: #1a0b06;
+}
+
+.fantasy-bites-tab:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Products carousel */
+.fantasy-bites-gallery-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.fantasy-bites-gallery {
+  display: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.fantasy-bites-gallery.active {
+  display: block;
+}
+
+.fantasy-bites-product {
+  display: inline-block;
+  width: 280px;
+  margin: 0 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.fantasy-bites-product:hover {
+  transform: translateY(-10px);
+}
+
+.fantasy-bites-product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation arrows */
+.fantasy-bites-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #d63030;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fantasy-bites-left-arrow {
+  left: -25px;
+}
+
+.fantasy-bites-right-arrow {
+  right: -25px;
+}
+
+/* Indicator dots */
+.fantasy-bites-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.fantasy-bites-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #666;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fantasy-bites-dot.active {
+  background-color: #d63030;
+}
+
+/* CTA button */
+.fantasy-bites-cta {
+  display: inline-block;
+  background-color: #d63030;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.fantasy-bites-cta:hover {
+  background-color: #b52020;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fantasy-bites-tabs {
+    gap: 10px;
+  }
+  
+  .fantasy-bites-tab {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+  
+  .fantasy-bites-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}

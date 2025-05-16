@@ -175,6 +175,22 @@
           }
         },
         {
+          "title": "Fantasy Bites Gallery",
+          "id": "fantasy-bites",
+          "model": "fantasy-bites",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Fantasy Bites Gallery",
+                  "model": "fantasy-bites"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Product Range Banner",
           "id": "product-range",
           "plugins": {
