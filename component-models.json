@@ -636,5 +636,41 @@
         "label": "CTA Link"
       }
     ]
+  },
+  {
+    "id": "product-slider",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Section Title"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "text",
+        "name": "ctaLink",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
+    "id": "productTab",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabLabel",
+        "label": "Tab Label"
+      },
+      {
+        "component": "reference",
+        "name": "productImages",
+        "label": "Product Images",
+        "multi": true
+      }
+    ]
   }
 ]

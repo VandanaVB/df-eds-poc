@@ -1,92 +1,9 @@
-.df-product-tabs {
-  padding: 60px 20px;
-  background: #2d1a0c;
-  color: #fff;
-  text-align: center;
-}
-
-.df-tabs-heading {
-  font-size: 32px;
-  color: #e94e1b;
-  margin-bottom: 30px;
-}
-
-.df-tabs-nav {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.df-tab-btn {
-  background: transparent;
-  border: 2px solid #e94e1b;
-  color: #fff;
-  padding: 8px 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 16px;
-}
-
-.df-tab-btn.active,
-.df-tab-btn:hover {
-  background: #e94e1b;
-  color: #fff;
-}
-
-.df-products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+.block.product-tab .product-image {
+  max-width: 150px;
   margin: 0 auto;
-  padding: 20px 0;
 }
 
-.df-product-card {
-  background: #3d2812;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  display: block;
-}
-
-.df-product-card:hover {
-  transform: translateY(-5px);
-}
-
-.df-product-card img {
+.block.product-tab .product-image img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-.df-product-card h3 {
-  margin: 15px 0;
-  font-size: 1.15rem;
-  color: #e94e1b;
-  font-weight: 600;
-}
-
-@media (max-width: 900px) {
-  .df-products-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .df-products-grid {
-    grid-template-columns: 1fr;
-  }
-  .df-tabs-nav {
-    gap: 8px;
-  }
-  .df-tab-btn {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
+  border-radius: 8px;
 }
